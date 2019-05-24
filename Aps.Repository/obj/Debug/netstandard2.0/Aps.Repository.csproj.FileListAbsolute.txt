@@ -1,0 +1,12 @@
+/Users/mateus/Documents/aps-map/Aps.Repository/bin/Debug/netstandard2.0/Aps.Repository.deps.json
+/Users/mateus/Documents/aps-map/Aps.Repository/bin/Debug/netstandard2.0/Aps.Repository.dll
+/Users/mateus/Documents/aps-map/Aps.Repository/bin/Debug/netstandard2.0/Aps.Repository.pdb
+/Users/mateus/Documents/aps-map/Aps.Repository/bin/Debug/netstandard2.0/Aps.Domain.dll
+/Users/mateus/Documents/aps-map/Aps.Repository/bin/Debug/netstandard2.0/Aps.Domain.pdb
+/Users/mateus/Documents/aps-map/Aps.Repository/obj/Debug/netstandard2.0/Aps.Repository.csprojAssemblyReference.cache
+/Users/mateus/Documents/aps-map/Aps.Repository/obj/Debug/netstandard2.0/Aps.Repository.csproj.CoreCompileInputs.cache
+/Users/mateus/Documents/aps-map/Aps.Repository/obj/Debug/netstandard2.0/Aps.Repository.AssemblyInfoInputs.cache
+/Users/mateus/Documents/aps-map/Aps.Repository/obj/Debug/netstandard2.0/Aps.Repository.AssemblyInfo.cs
+/Users/mateus/Documents/aps-map/Aps.Repository/obj/Debug/netstandard2.0/Aps.Repository.csproj.CopyComplete
+/Users/mateus/Documents/aps-map/Aps.Repository/obj/Debug/netstandard2.0/Aps.Repository.dll
+/Users/mateus/Documents/aps-map/Aps.Repository/obj/Debug/netstandard2.0/Aps.Repository.pdb

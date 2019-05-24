@@ -1,0 +1,9 @@
+/Users/mateus/Documents/aps-map/Aps.Domain/bin/Debug/netstandard2.0/Aps.Domain.deps.json
+/Users/mateus/Documents/aps-map/Aps.Domain/bin/Debug/netstandard2.0/Aps.Domain.dll
+/Users/mateus/Documents/aps-map/Aps.Domain/bin/Debug/netstandard2.0/Aps.Domain.pdb
+/Users/mateus/Documents/aps-map/Aps.Domain/obj/Debug/netstandard2.0/Aps.Domain.csprojAssemblyReference.cache
+/Users/mateus/Documents/aps-map/Aps.Domain/obj/Debug/netstandard2.0/Aps.Domain.csproj.CoreCompileInputs.cache
+/Users/mateus/Documents/aps-map/Aps.Domain/obj/Debug/netstandard2.0/Aps.Domain.AssemblyInfoInputs.cache
+/Users/mateus/Documents/aps-map/Aps.Domain/obj/Debug/netstandard2.0/Aps.Domain.AssemblyInfo.cs
+/Users/mateus/Documents/aps-map/Aps.Domain/obj/Debug/netstandard2.0/Aps.Domain.dll
+/Users/mateus/Documents/aps-map/Aps.Domain/obj/Debug/netstandard2.0/Aps.Domain.pdb
