@@ -15,6 +15,7 @@ namespace Aps.Repository
 
          //Spesific Students Methods
          Task<Student[]> GetAllStudentsAsync();
-         Task<Student> GetAllStudentsAsyncById(int studentId);
+         Task<Student> GetAllStudentsAsyncById(int id);
+
     }
 }

@@ -388,4 +388,4 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/macos,visualstudio,visualstudiocode
-/vscode
+./vscode

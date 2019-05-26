@@ -30,6 +30,7 @@ namespace Aps.WebApi
             services.AddDbContext<ApsContext>(dbConection => dbConection.UseNpgsql(
                 "Host=ec2-174-129-208-118.compute-1.amazonaws.com;Database=d7cadjb7jbcug1;Username=sqmwehfdjdlutf;Password=9926ac0ce877f7d80f2b73ab7cd899ae0762ba46863ac933c977661591fb7cd6;Pooling=true;Use SSL Stream=True;SSL Mode=Require;TrustServerCertificate=True;"
                 ));
+            services.AddScoped<IApsRepository, ApsRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
