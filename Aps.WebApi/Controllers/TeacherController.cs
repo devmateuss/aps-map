@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Aps.Domain;
+using Aps.Repository;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aps.WebApi.Controllers
 {
@@ -10,36 +14,89 @@ namespace Aps.WebApi.Controllers
     [ApiController]
     public class TeacherController : ControllerBase
     {
-        // GET api/values
+        public ApsContext _context { get; }
+        public TeacherController(ApsContext context)
+        {
+            _context = context;
+
+        }
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<IActionResult> Get()
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                // IQueryable<Teacher> query = _context.Teachers
+                //     .Include(T => T.GetDisciplines());
+
+                var results = await _context.Teachers.ToListAsync();
+                
+                return Ok(results);
+            }
+            catch (System.Exception)
+            {
+                
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Banco de dados Falhou");
+            }
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return "value";
+            try
+            {
+                var results = await _context.Teachers.FirstOrDefaultAsync(teacher => teacher.Id == id);
+                return Ok(results);
+            }
+            catch (System.Exception)
+            {
+                
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Banco de dados Falhou");
+            }
         }
 
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<Teacher>> Post(Teacher item)
         {
+            _context.Teachers.Add(item);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(Get), new { id = item.Id }, item);
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<ActionResult<Teacher>> Put(int id ,Teacher item)
         {
+            var teacher = await _context.Teachers.FirstOrDefaultAsync(t => t.Id == id);
+
+            _context.Teachers.Update(teacher);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(Get), new { id = item.Id }, item);
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult<Teacher>> Delete(int id)
         {
+            try
+            {
+                var teacher = await _context.Teachers.FirstOrDefaultAsync(t => t.Id == id);
+
+                if(teacher == null){
+
+                    return NotFound();
+
+                } else {
+
+                    _context.Teachers.Remove(teacher);
+                    return Ok("Deletato com sucesso!!!!");
+                    
+                }
+
+            }
+            catch (System.Exception)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Banco de dados Falhou");
+            }
         }
     }
 }
